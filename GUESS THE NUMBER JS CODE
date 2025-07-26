@@ -1,0 +1,34 @@
+<html>
+    <link rel="stylesheet" href="style.css">
+    <body>
+<h1>Guess The Number Game</h1>
+<input id="num">
+<p id="result"></p>
+<p id="score"></p>
+<button onclick="game()">check</button>
+<script>
+    let a=document.getElementById("num");
+    let b=document.getElementById("result");
+    let c=document.getElementById("score");
+    let r=Math.floor(Math.random()*10)+1
+    let tscore=10;
+    function game()
+    {
+        let e=a.value;
+        if(e==r)
+    {
+        console.log("your right");
+        c.textContent="your score:"+tscore;
+        b.textContent="you are right!";
+        alert("you won!");
+    }
+    else{
+        let your_score=--tscore;
+        c.textContent="your score:"+your_score;
+        console.log("your wrong");
+        b.textContent="you are wrong";
+    }
+    }
+</script>
+</body>
+</html>
